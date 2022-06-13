@@ -2,10 +2,11 @@
   "name": "3.-expenses-chart-component",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
