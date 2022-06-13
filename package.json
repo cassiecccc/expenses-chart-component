@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "gh-pages": "^4.0.0",
     "parcel": "^2.6.0"
   }
