@@ -1,0 +1,185 @@
+// Colors
+
+//Primary
+
+$soft-red: hsl(10, 79%, 65%);
+$soft-red-hover: hsl(10, 100, 76);
+$cyan: hsl(186, 34%, 60%);
+$cyan-hover: hsl(186, 49, 80);
+
+//Neutral
+$card-white: hsl(30, 100, 98%);
+$white: #ffffff;
+
+$dark-brown: hsl(25, 47%, 15%);
+$medium-brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very-pale-orange: hsl(33, 100%, 98%);
+
+//font weights
+$regular: 400;
+$bold: 700;
+
+//reset
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: $regular;
+  background-color: $cream;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.chart {
+  width: 540px;
+}
+
+//styling
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 125px;
+  background-color: $soft-red;
+  border-radius: 20px;
+  padding: 0 2rem;
+  margin-bottom: 24px;
+}
+
+.header-left {
+  #my-balance {
+    color: $white;
+    padding-bottom: 0.5rem;
+  }
+  #balance-amount {
+    color: $card-white;
+    font-size: 32px;
+    font-weight: $bold;
+  }
+}
+
+main {
+  height: 511px;
+  background-color: $card-white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.75rem 2.5rem 2.5rem 2.5rem;
+  h2 {
+    font-size: 32px;
+    margin: 0;
+  }
+}
+
+.graph {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid $cream;
+
+  .bar-wrapper {
+    width: 50.36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    cursor: pointer;
+
+    .bar {
+      width: 50.36px;
+      border-radius: 5px;
+    }
+
+    .bar:hover,
+    .bar:active {
+      background-color: $soft-red-hover;
+    }
+
+    .day {
+      font-size: 15px;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      width: 62px;
+      height: 35px;
+      color: $card-white;
+      background-color: $dark-brown;
+      border-radius: 5px;
+      font-size: 14.5px;
+      font-weight: $bold;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-amount {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.footer-left > p {
+  color: $medium-brown;
+}
+
+.footer-left > h1 {
+  color: $dark-brown;
+  font-size: 48px;
+}
+
+.footer-right {
+  text-align: end;
+  margin-top: 1rem;
+}
+
+#percentage {
+  color: $dark-brown;
+  font-weight: $bold;
+}
+
+.footer-right > p {
+  color: $medium-brown;
+}
+
+//js classes
+.hidden {
+  display: none;
+}
+
+.hover {
+  opacity: 45%;
+}
+
+.active {
+  opacity: 45%;
+}

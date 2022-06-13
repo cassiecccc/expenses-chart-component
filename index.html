@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+    <title>Expense Chart Component || Project</title>
+  </head>
+  <body>
+    <section class="chart">
+      <header>
+        <div class="header-left">
+          <p id="my-balance">My balance</p>
+          <h3 id="balance-amount">$921.48</h3>
+        </div>
+        <div class="header-logo">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </header>
+      <main>
+        <h2>Spending - Last 7 days</h2>
+        <div data-graph class="graph"></div>
+        <div class="footer">
+          <div class="footer-left">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
+          </div>
+          <div class="footer-right">
+            <p id="percentage active">+2.4%</p>
+            <p>from last month</p>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <template id="bar-template">
+      <div data-wrapper class="bar-wrapper">
+        <div data-tag class="tag hidden"><p data-amount class="tag-amount"></p></div>
+        <div data-bar class="bar"></div>
+        <p data-day class="day">mon</p>
+      </div>
+    </template>
+  </body>
+</html>
